@@ -1,4 +1,25 @@
 function App() {
+  const descriptions = [
+    {
+      title: "Grow Together",
+      description: "Generate meaningful discussions with your audience and build a strong, loyal community. Think of the insightful conversations you miss out on with a feedback form.",
+      imagePath: "/illustration-grow-together.svg",
+      alt: "Grow Together",
+    },
+    {
+      title: "Flowing Conversation",
+      description: "You wouldn't paginate a conversation in real life, so why do it online? Our threads have just-in-time loading for a more natural flow.",
+      imagePath: "/illustration-flowing-conversation.svg",
+      alt: "Flowing Conversation",
+    },
+    {
+      title: "Your Users",
+      description: "It takes no time at all to integrate Huddle with your app's authentication solution. This means, once signed in to your app, your users can start chatting immediately.",
+      imagePath: "/illustration-your-users.svg",
+      alt: "Your Users",
+    },
+  ];
+
   return (
     <>
       <div>
@@ -19,19 +40,20 @@ function App() {
           </section>
         </div>
 
-        <section>
-          <article className={"mx-[104px] mt-[160px] flex h-[440px] items-center gap-x-[168px] border pl-[109px] pr-4"}>
-            <div>
-              <h2 className={"font-poppins text-[28px] font-semibold leading-[42px] text-very-dark-cyan"}>Grow Together</h2>
-              <p className={"pt-4 font-openSans text-[18px] leading-[27px] text-grayish-blue"}>
-                Generate meaningful discussions with your audience and build a strong, loyal community. Think of the insightful conversations you miss out on with a feedback form.
-              </p>
-            </div>
-            <div className={"flex items-center"}>
-              <img src="/illustration-grow-together.svg" alt="Grow Together" />
-            </div>
-          </article>
+        <section className={"space-y-10"}>
+          {descriptions.map((description, index) => (
+            <article key={index} className={"mx-[104px] mt-[160px] flex h-[440px] items-center gap-x-[168px] border pl-[109px] pr-4 even:flex-row-reverse"}>
+              <div>
+                <h2 className={"font-poppins text-[28px] font-semibold leading-[42px] text-very-dark-cyan"}>{description.title}</h2>
+                <p className={"pt-4 font-openSans text-[18px] leading-[27px] text-grayish-blue"}>{description.description}</p>
+              </div>
+              <div className={"flex items-center"}>
+                <img src={description.imagePath} alt={description.alt} />
+              </div>
+            </article>
+          ))}
         </section>
+
         <footer></footer>
       </div>
     </>
