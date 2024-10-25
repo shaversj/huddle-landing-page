@@ -7,7 +7,7 @@ function App() {
         <div className={"bg-[#EDFBFF] bg-[url('/bg-hero-desktop.svg')] px-20"}>
           <header className={"flex items-center pt-12"}>
             <img className={"h-[31px] w-[200px]"} src="/logo.svg" alt="Huddle Logo" />
-            <button className={"ml-auto h-12 w-[12.5rem] rounded-full bg-white font-openSans text-[0.875rem] font-bold leading-[1.188rem] text-very-dark-cyan"}>Try It Free</button>
+            <button className={"shadow-button-shadow ml-auto h-12 w-[12.5rem] rounded-full bg-white font-openSans text-[0.875rem] font-bold leading-[1.188rem] text-very-dark-cyan"}>Try It Free</button>
           </header>
           <section className={"flex items-center gap-x-[3.375rem] pb-[4.5rem] pt-[4.438rem]"}>
             <div className={"basis-[40%] space-y-8"}>
@@ -15,14 +15,14 @@ function App() {
               <p className={"font-openSans text-[1.125rem] leading-[1.688rem] text-very-dark-cyan"}>
                 Huddle re-imagines the way we build communities. You have a voice, but so does your audience. Create connections with your users as you engage in genuine discussion.{" "}
               </p>
-              <button className={"h-[3.5rem] w-[17.5rem] rounded-full bg-pink text-center font-openSans text-[0.875rem] font-bold leading-[1.188rem] text-white"}>Get Started For Free</button>
+              <button className={"shadow-hero-button-shadow h-[3.5rem] w-[17.5rem] rounded-full bg-pink text-center font-openSans text-[0.875rem] font-bold leading-[1.188rem] text-white"}>Get Started For Free</button>
             </div>
             <img className={"h-[30.125rem] w-[42.5rem]"} src="/illustration-mockups.svg" alt="Screen Mockups" />
           </section>
         </div>
         <section className={"space-y-10 pb-[344px]"}>
           {features.map((description, index) => (
-            <article key={index} className={"mx-[104px] mt-[160px] flex h-[440px] items-center gap-x-[168px] border pl-[109px] pr-4 even:flex-row-reverse"}>
+            <article key={index} className={"shadow-feature-shadow mx-[104px] mt-[160px] flex h-[440px] items-center gap-x-[168px] rounded-2xl pl-[109px] pr-4 even:flex-row-reverse"}>
               <div>
                 <h2 className={"font-poppins text-[28px] font-semibold leading-[42px] text-very-dark-cyan"}>{description.title}</h2>
                 <p className={"pt-4 font-openSans text-[18px] leading-[27px] text-grayish-blue"}>{description.description}</p>
@@ -33,10 +33,9 @@ function App() {
             </article>
           ))}
         </section>
-
         <section className={"shadow-cta-shadow absolute left-1/2 z-10 -ml-[400px] flex h-[280px] w-[800px] -translate-y-2/3 flex-col items-center justify-center rounded-[15px] bg-white"}>
           <p className={"font-poppins text-[32px] font-semibold leading-[60px] text-very-dark-cyan"}>Ready To Build Your Community?</p>
-          <button className={"mt-8 h-[80px] w-[400px] rounded-full bg-pink text-center font-openSans text-[20px] font-bold leading-[30px] text-white"}>Get Started For Free</button>
+          <button className={"shadow-cta-button-shadow mt-8 h-[80px] w-[400px] rounded-full bg-pink text-center font-openSans text-[20px] font-bold leading-[30px] text-white"}>Get Started For Free</button>
         </section>
         <footer className={"z-20 bg-very-dark-cyan px-[120px] pb-16 pt-[144px] font-openSans text-[14px] leading-6 text-[#DFE4F0]"}>
           <img className={"h-6 w-[152px]"} src="/logo-footer.svg" alt="Huddle Logo" />

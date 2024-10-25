@@ -5,6 +5,10 @@ export default {
     extend: {
       boxShadow: {
         "cta-shadow": "0px 6px 13px rgba(0, 37, 46, 0.223053)",
+        "cta-button-shadow": "0px 6px 13px rgba(0, 37, 46, 0.223053)",
+        "feature-shadow": "0px 0px 14px rgba(0, 0, 0, 0.07)",
+        "button-shadow": "0px 3px 11px rgba(0, 0, 0, 0.0954201)",
+        "hero-button-shadow": "2px 3px 6px 1px rgba(255, 82, 193, 0.166185)",
       },
       screens: {
         sm: "375px",
