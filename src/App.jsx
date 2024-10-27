@@ -11,8 +11,8 @@ function App() {
               Try It Free
             </button>
           </header>
-          <section className={"mx-auto flex w-[304px] flex-col items-center justify-center pb-[2.313rem] pt-[4.438rem] lg:w-full lg:flex-row lg:gap-x-[3.375rem] lg:px-0 lg:pb-[4.5rem]"}>
-            <div className={"flex w-[304px] basis-[40%] flex-col items-center lg:w-full lg:items-start lg:gap-y-8"}>
+          <section className={"mx-auto flex w-[19rem] flex-col items-center justify-center pb-[2.313rem] pt-[4.438rem] lg:w-full lg:flex-row lg:gap-x-[3.375rem] lg:px-0 lg:pb-[4.5rem]"}>
+            <div className={"flex w-[19rem] basis-[40%] flex-col items-center lg:w-full lg:items-start lg:gap-y-8"}>
               <h1 className={"text-center font-poppins text-[1.5rem] font-semibold leading-[2.25rem] text-very-dark-cyan lg:text-left lg:text-[2.5rem] lg:leading-[3.75rem]"}>Build The Community Your Fans Will Love</h1>
               <p className={"pt-6 text-center font-openSans leading-6 text-very-dark-cyan lg:pt-0 lg:text-left lg:text-[1.125rem] lg:leading-[1.688rem]"}>
                 Huddle re-imagines the way we build communities. You have a voice, but so does your audience. Create connections with your users as you engage in genuine discussion.{" "}
@@ -26,40 +26,47 @@ function App() {
             <img className={"mt-[3.5rem] lg:mt-0 lg:h-[30.125rem] lg:w-[42.5rem]"} src="/illustration-mockups.svg" alt="Screen Mockups" />
           </section>
         </div>
-        <section className={"space-y-10 pb-[344px]"}>
+        <section className={"mx-5 space-y-10 pb-[21.5rem] lg:mx-0"}>
           {features.map((description, index) => (
-            <article key={index} className={"mx-[104px] mt-[160px] flex h-[440px] items-center gap-x-[168px] rounded-2xl pl-[109px] pr-4 shadow-feature-shadow even:flex-row-reverse"}>
+            <article
+              key={index}
+              className={
+                "mt-[3.688rem] flex h-[30.5rem] flex-col-reverse items-center justify-center gap-y-6 rounded-2xl shadow-feature-shadow lg:mx-[104px] lg:mt-[10rem] lg:h-[27.5rem] lg:flex-row lg:gap-x-[10.5rem] lg:pl-[6.813rem] lg:pr-4 lg:even:flex-row-reverse"
+              }
+            >
               <div>
-                <h2 className={"font-poppins text-[28px] font-semibold leading-[42px] text-very-dark-cyan"}>{description.title}</h2>
-                <p className={"pt-4 font-openSans text-[18px] leading-[27px] text-grayish-blue"}>{description.description}</p>
+                <h2 className={"text-center font-poppins text-[1.25rem] font-semibold leading-[1.875rem] text-very-dark-cyan lg:text-left lg:text-[1.75rem] lg:leading-[2.625rem]"}>{description.title}</h2>
+                <p className={"w-[16rem] pt-4 text-center font-openSans text-[0.875rem] leading-[1.313rem] text-grayish-blue lg:w-full lg:text-left lg:text-[1.125rem] lg:leading-[1.688rem]"}>{description.description}</p>
               </div>
-              <div className={"flex items-center"}>
+              <div className={"flex size-[16rem] items-center lg:size-full"}>
                 <img src={description.imagePath} alt={description.alt} />
               </div>
             </article>
           ))}
         </section>
-        <section className={"absolute left-1/2 z-10 -ml-[400px] flex h-[280px] w-[800px] -translate-y-2/3 flex-col items-center justify-center rounded-[15px] bg-white shadow-cta-shadow"}>
-          <p className={"font-poppins text-[32px] font-semibold leading-[60px] text-very-dark-cyan"}>Ready To Build Your Community?</p>
-          <button className={"mt-8 h-[80px] w-[400px] rounded-full bg-pink text-center font-openSans text-[20px] font-bold leading-[30px] text-white shadow-cta-button-shadow"}>Get Started For Free</button>
+        <section className={"absolute left-1/2 z-10 mx-3 -ml-[176px] flex h-[176px] min-w-[352px] -translate-y-2/3 flex-col items-center justify-center rounded-[15px] bg-white px-4 shadow-cta-shadow lg:-ml-[400px] lg:h-[280px] lg:w-[800px] lg:px-0"}>
+          <p className={"font-poppins text-[18px] font-semibold leading-[30px] text-very-dark-cyan lg:text-[32px] lg:leading-[60px]"}>Ready To Build Your Community?</p>
+          <button className={"mt-6 h-[40px] w-[200px] rounded-full bg-pink text-center font-openSans text-[10px] font-bold leading-[15px] text-white shadow-cta-button-shadow lg:mt-8 lg:h-[80px] lg:w-[400px] lg:text-[20px] lg:leading-[30px]"}>
+            Get Started For Free
+          </button>
         </section>
-        <footer className={"z-20 bg-very-dark-cyan px-[120px] pb-16 pt-[144px] font-openSans text-[14px] leading-6 text-[#DFE4F0]"}>
+        <footer className={"z-20 bg-very-dark-cyan px-4 pb-[42px] pt-[124px] font-openSans text-[14px] leading-6 text-[#DFE4F0] lg:px-[120px] lg:pb-16 lg:pt-[144px]"}>
           <img className={"h-6 w-[152px]"} src="/logo-footer.svg" alt="Huddle Logo" />
-          <div className={"flex gap-x-[130px] pt-8"}>
-            <div className={"space-y-4"}>
+          <div className={"flex flex-col gap-x-[130px] pt-8 lg:flex-row"}>
+            <div className={"space-y-6 lg:space-y-4"}>
               {companyInformation.contactInformation.map((contactInformation, index) => (
-                <div key={index} className={"flex gap-x-4"}>
-                  <div className={`flex size-6 items-center ${contactInformation.icon.includes("location") && "pt-1"}`}>
+                <div key={index} className={"flex w-full gap-x-4"}>
+                  <div className={`flex size-6 items-center justify-start ${contactInformation.icon.includes("location") && "pt-1"}`}>
                     <img src={contactInformation.icon} alt={contactInformation.iconAlt} />
                   </div>
-                  <p className={"max-w-[339px]"}>
+                  <p className={"w-[298px] lg:max-w-[339px]"}>
                     <a>{contactInformation.text}</a>
                   </p>
                 </div>
               ))}
             </div>
 
-            <nav className={"grid grid-cols-2 grid-rows-[auto,auto,1fr] gap-x-[130px] gap-y-3 text-nowrap"}>
+            <nav className={"grid gap-x-[130px] gap-y-3 text-nowrap pt-[41px] lg:grid-cols-2 lg:grid-rows-[auto,auto,1fr] lg:pt-0"}>
               {companyInformation.navigation.map((navigation, index) => (
                 <a className={"h-[27px]"} key={index}>
                   {navigation.title}
@@ -67,7 +74,7 @@ function App() {
               ))}
             </nav>
 
-            <div className={"flex flex-col justify-between"}>
+            <div className={"flex flex-col items-center gap-y-6 pt-6 lg:items-start lg:justify-between lg:gap-y-0 lg:pb-0 lg:pt-0"}>
               <div className={"flex gap-x-[11.35px]"}>
                 {companyInformation.socialMedia.map((socialMedia, index) => (
                   <img key={index} src={socialMedia.icon} alt="Social Media Icon" />
