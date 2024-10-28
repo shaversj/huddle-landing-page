@@ -7,7 +7,11 @@ function App() {
         <main className={"bg-[#EDFBFF] bg-[url('/bg-hero-mobile.svg')] px-4 lg:bg-[url('/bg-hero-desktop.svg')] lg:px-20"}>
           <header className={"flex items-center pt-12"}>
             <img className={"h-4 w-[6.5rem] lg:h-[1.938rem] lg:w-[12.5rem]"} src="/logo.svg" alt="Huddle Logo" />
-            <button className={"ml-auto h-6 w-[6rem] rounded-full bg-white font-openSans text-[0.625rem] font-bold leading-[0.875rem] text-very-dark-cyan shadow-button-shadow lg:h-12 lg:w-[12.5rem] lg:text-[0.875rem] lg:leading-[1.188rem]"}>
+            <button
+              className={
+                "ml-auto h-6 w-[6rem] rounded-full bg-white font-openSans text-[0.625rem] font-bold leading-[0.875rem] text-very-dark-cyan shadow-button-shadow hover:text-[#7f8e9a] lg:h-12 lg:w-[12.5rem] lg:text-[0.875rem] lg:leading-[1.188rem]"
+              }
+            >
               Try It Free
             </button>
           </header>
@@ -19,7 +23,9 @@ function App() {
                 Huddle re-imagines the way we build communities. You have a voice, but so does your audience. Create connections with your users as you engage in genuine discussion.{" "}
               </p>
               <button
-                className={"mt-8 h-[2.5rem] w-[15rem] rounded-full bg-pink text-center font-openSans text-xs font-bold leading-4 text-white shadow-hero-button-shadow lg:mt-0 lg:h-[3.5rem] lg:w-[17.5rem] lg:text-[0.875rem] lg:leading-[1.188rem]"}
+                className={
+                  "mt-8 h-[2.5rem] w-[15rem] rounded-full bg-pink text-center font-openSans text-xs font-bold leading-4 text-white shadow-hero-button-shadow hover:bg-[#FF9ADB] lg:mt-0 lg:h-[3.5rem] lg:w-[17.5rem] lg:text-[0.875rem] lg:leading-[1.188rem]"
+                }
               >
                 Get Started For Free
               </button>
@@ -50,7 +56,11 @@ function App() {
         <section className={"relative mx-4 lg:mx-0"}>
           <div className={"absolute left-1/2 z-10 flex h-[176px] w-full -translate-x-1/2 -translate-y-2/3 flex-col items-center justify-center rounded-[15px] bg-white shadow-cta-shadow lg:h-[280px] lg:w-[800px]"}>
             <p className={"font-poppins text-[18px] font-semibold leading-[30px] text-very-dark-cyan lg:text-[32px] lg:leading-[60px]"}>Ready To Build Your Community?</p>
-            <button className={"mt-6 h-[40px] w-[200px] rounded-full bg-pink text-center font-openSans text-[10px] font-bold leading-[15px] text-white shadow-cta-button-shadow lg:mt-8 lg:h-[80px] lg:w-[400px] lg:text-[20px] lg:leading-[30px]"}>
+            <button
+              className={
+                "mt-6 h-[40px] w-[200px] rounded-full bg-pink text-center font-openSans text-[10px] font-bold leading-[15px] text-white shadow-cta-button-shadow hover:bg-[#FF9ADB] lg:mt-8 lg:h-[80px] lg:w-[400px] lg:text-[20px] lg:leading-[30px]"
+              }
+            >
               Get Started For Free
             </button>
           </div>
@@ -74,7 +84,7 @@ function App() {
 
             <nav className={"grid gap-x-[8.125rem] gap-y-3 text-nowrap pt-[2.563rem] lg:grid-cols-2 lg:grid-rows-[auto,auto,1fr] lg:pt-0"}>
               {companyInformation.navigation.map((navigation, index) => (
-                <a className={"h-[27px]"} key={index}>
+                <a href={`#${navigation.title}`} className={"h-[27px]"} key={index}>
                   {navigation.title}
                 </a>
               ))}
@@ -82,9 +92,9 @@ function App() {
 
             <div className={"flex flex-col items-center gap-y-6 pt-6 lg:items-start lg:justify-between lg:gap-y-0 lg:pb-0 lg:pt-0"}>
               <div className={"flex gap-x-[0.709rem]"}>
-                {companyInformation.socialMedia.map((socialMedia, index) => (
-                  <img key={index} src={socialMedia.icon} alt="Social Media Icon" />
-                ))}
+                <a href={"#Facebook"} className={`h-[31px] w-[32px] bg-[url('/icon-facebook.svg')] bg-cover hover:bg-[url('/icon-facebook-hover.svg')]`} />
+                <a href={"#Twitter"} className={`h-[31px] w-[32px] bg-[url('/icon-twitter.svg')] bg-cover hover:bg-[url('/icon-twitter-hover.svg')]`} />
+                <a href={"#Instagram"} className={`h-[31px] w-[32px] bg-[url('/icon-instagram.svg')] bg-cover hover:bg-[url('/icon-instagram-hover.svg')]`} />
               </div>
               <p className={"text-[0.75rem] leading-[1.125rem]"}>© Copyright 2018 Huddle. All rights reserved.</p>
             </div>

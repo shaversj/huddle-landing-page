@@ -63,21 +63,4 @@ export const companyInformation = {
       link: "#",
     },
   ],
-  socialMedia: [
-    {
-      name: "Facebook",
-      icon: "/icon-facebook.svg",
-      link: "#",
-    },
-    {
-      name: "Twitter",
-      icon: "/icon-twitter.svg",
-      link: "#",
-    },
-    {
-      name: "Instagram",
-      icon: "/icon-instagram.svg",
-      link: "#",
-    },
-  ],
 };
