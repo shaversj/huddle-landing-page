@@ -75,7 +75,7 @@ function App() {
                   <div className={`flex size-6 items-center justify-start ${contactInformation.icon.includes("location") && "pt-1"}`}>
                     <img src={contactInformation.icon} alt={contactInformation.iconAlt} />
                   </div>
-                  <p className={"w-[18.625rem] lg:max-w-[21.188rem]"}>
+                  <p className={"w-[18.625rem] lg:w-[21.188rem]"}>
                     <a>{contactInformation.text}</a>
                   </p>
                 </div>
