@@ -3,8 +3,8 @@ import { companyInformation, features } from "./constants/constants.ts";
 function App() {
   return (
     <>
-      <div className={"antialiased"}>
-        <main className={"bg-[#EDFBFF] bg-[url('/bg-hero-mobile.svg')] px-4 lg:bg-[url('/bg-hero-desktop.svg')] lg:px-20"}>
+      <main className={"antialiased"}>
+        <section className={"bg-[#EDFBFF] bg-[url('/bg-hero-mobile.svg')] px-4 lg:bg-[url('/bg-hero-desktop.svg')] lg:px-20"}>
           <header className={"flex items-center pt-12"}>
             <img className={"h-4 w-[6.5rem] lg:h-[1.938rem] lg:w-[12.5rem]"} src="/logo.svg" alt="Huddle Logo" />
             <button
@@ -32,7 +32,7 @@ function App() {
             </div>
             <img className={"mt-[3.5rem] lg:mt-0 lg:h-[30.125rem] lg:w-[42.5rem]"} src="/illustration-mockups.svg" alt="Screen Mockups" />
           </section>
-        </main>
+        </section>
 
         <section className={"mx-5 space-y-10 pb-[14.313rem] lg:mx-0 lg:pb-[21.5rem]"}>
           {features.map((description, index) => (
@@ -92,15 +92,15 @@ function App() {
 
             <div className={"flex flex-col items-center gap-y-6 pt-6 lg:items-start lg:justify-between lg:gap-y-0 lg:pb-0 lg:pt-0"}>
               <div className={"flex gap-x-[0.709rem]"}>
-                <a href={"#Facebook"} className={`h-[31px] w-[32px] bg-[url('/icon-facebook.svg')] bg-cover hover:bg-[url('/icon-facebook-hover.svg')]`} />
-                <a href={"#Twitter"} className={`h-[31px] w-[32px] bg-[url('/icon-twitter.svg')] bg-cover hover:bg-[url('/icon-twitter-hover.svg')]`} />
-                <a href={"#Instagram"} className={`h-[31px] w-[32px] bg-[url('/icon-instagram.svg')] bg-cover hover:bg-[url('/icon-instagram-hover.svg')]`} />
+                <a aria-label={"Link to Facebook"} href={"#Facebook"} className={`h-[31px] w-[32px] bg-[url('/icon-facebook.svg')] bg-cover hover:bg-[url('/icon-facebook-hover.svg')]`} />
+                <a aria-label={"Link to Twitter"} href={"#Twitter"} className={`h-[31px] w-[32px] bg-[url('/icon-twitter.svg')] bg-cover hover:bg-[url('/icon-twitter-hover.svg')]`} />
+                <a aria-label={"Link to Instagram"} href={"#Instagram"} className={`h-[31px] w-[32px] bg-[url('/icon-instagram.svg')] bg-cover hover:bg-[url('/icon-instagram-hover.svg')]`} />
               </div>
               <p className={"text-[0.75rem] leading-[1.125rem]"}>© Copyright 2018 Huddle. All rights reserved.</p>
             </div>
           </div>
         </footer>
-      </div>
+      </main>
     </>
   );
 }
